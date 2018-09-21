@@ -1,0 +1,286 @@
+
+//Search Box code for database designed in Wix API
+
+import wixData from 'wix-data';
+	
+$w.onReady(function() {
+	wixData.query('request-list') 
+
+	.contains("Prospect", $w('#ProspectID').value)
+	.find()
+	.then( res => {
+		$w('#request-list').rows = res.items;
+		$w('#appConfirmation', 'spouseConfirmation').show();
+	});
+	
+	
+	$w('request-list').columns = [
+			{
+				'id' : 'col1',
+				'dataPath' : 'ProspectID',
+				'label' : 'ProspectID',
+				'width' :100,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col2',
+				'dataPath' : 'Firstname',
+				'label' : 'Firstname',
+				'width' :190,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col3',
+				'dataPath' : 'Lastname',
+				'label' : 'Lastname',
+				'width' :158,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col4',
+				'dataPath' : 'Street',
+				'label' : 'Street',
+				'width' :453,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col5',
+				'dataPath' : 'City',
+				'label' : 'City',
+				'width' :200,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col6',
+				'dataPath' : 'State',
+				'label' : 'State',
+				'width' :130,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col7',
+				'dataPath' : 'Zipcode',
+				'label' : 'Zipcode',
+				'width' :129,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col8',
+				'dataPath' : 'County',
+				'label' : 'County',
+				'width' :200,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col9',
+				'dataPath' : 'Phone',
+				'label' : 'Phone',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col10',
+				'dataPath' : 'DOB',
+				'label' : 'DOB',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col11',
+				'dataPath' : 'Age',
+				'label' : 'Age',
+				'width' : 68,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col12',
+				'dataPath' : 'sendInfo',
+				'label' : 'sendInfo',
+				'width' :20,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col13',
+				'dataPath' : 'SpouseFirstname',
+				'label' : 'spouseFirstname',
+				'width' :190,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col14',
+				'dataPath' : 'SpouseLastname',
+				'label' : 'spouseLastname',
+				'width' :158,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col15',
+				'dataPath' : 'SpouseDOB',
+				'label' : 'spouseDOB',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col16',
+				'dataPath' : 'SpouseAge',
+				'label' : 'pouseAge',
+				'width' :20,
+				'visible' : true,
+				'type' : 'string',
+			}];
+	
+	wixData.query('request-list')
+		
+	.contains('Lastname', $w('#Lastname').value)
+	.find()
+	.then( res => {
+		$w('#request-list').rows = res.items;
+		$w('#appConfirmation', 'spouseConfirmation').show();
+	});
+	
+	$w.onReady(function() {
+	$w('request-list').columns = [
+			{
+				'id' : 'col1',
+				'dataPath' : 'ProspectID',
+				'label' : 'ProspectID',
+				'width' :100,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col2',
+				'dataPath' : 'Firstname',
+				'label' : 'Firstname',
+				'width' :190,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col3',
+				'dataPath' : 'Lastname',
+				'label' : 'Lastname',
+				'width' :158,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col4',
+				'dataPath' : 'Street',
+				'label' : 'Street',
+				'width' :453,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col5',
+				'dataPath' : 'City',
+				'label' : 'City',
+				'width' :200,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col6',
+				'dataPath' : 'State',
+				'label' : 'State',
+				'width' :130,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col7',
+				'dataPath' : 'Zipcode',
+				'label' : 'Zipcode',
+				'width' :129,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col8',
+				'dataPath' : 'County',
+				'label' : 'County',
+				'width' :200,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col9',
+				'dataPath' : 'Phone',
+				'label' : 'Phone',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col10',
+				'dataPath' : 'DOB',
+				'label' : 'DOB',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col11',
+				'dataPath' : 'Age',
+				'label' : 'Age',
+				'width' : 68,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col12',
+				'dataPath' : 'sendInfo',
+				'label' : 'sendInfo',
+				'width' :20,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col13',
+				'dataPath' : 'SpouseFirstname',
+				'label' : 'spouseFirstname',
+				'width' :190,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col14',
+				'dataPath' : 'SpouseLastname',
+				'label' : 'spouseLastname',
+				'width' :158,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col15',
+				'dataPath' : 'SpouseDOB',
+				'label' : 'spouseDOB',
+				'width' :157,
+				'visible' : true,
+				'type' : 'string',
+			},
+			{
+				'id' : 'col16',
+				'dataPath' : 'SpouseAge',
+				'label' : 'pouseAge',
+				'width' :20,
+				'visible' : true,
+				'type' : 'string',
+			}];		
+	});
